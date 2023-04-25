@@ -1,38 +1,56 @@
-import styles from "../styles/Home.module.css";
-import Image from "next/image";
-import { BsDot } from "react-icons/bs";
+import { AiOutlineAlignLeft } from "react-icons/ai";
+import { BsCalendarEvent } from "react-icons/bs";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import { MdOutlineArrowRight } from "react-icons/md";
 import { HiArrowSmDown } from "react-icons/hi";
 import { HiArrowSmUp } from "react-icons/hi";
-import { BsCalendarEvent } from "react-icons/bs";
-import { useRouter } from 'next/router'
-
-export default function Home() {
-  const router = useRouter()
+import { RiArrowDropDownLine } from "react-icons/ri";
+import Image from "next/image";
+export default function Visa() {
   return (
-    <div className="bg-[#F5F6F8] w-auto h-auto">
-      <div className="pl-[1rem] pt-[1rem] flex flex-row justify-between text-[#2C4860]">
-        <h1 className="text-2xl text-[#2C4860]">All my accounts</h1>
-        <div className="pr-[1rem] ">
-          <Image src="/signal (2).png" alt="" width={30} height={30} />
-        </div>
-      </div>
-      <div></div>
-      <div className="pl-[1rem] ">
-        <h1>june 10, 2018</h1>
-      </div>
-      <div className="w-full h-[15rem]  mt-[1rem] flex flex-row justify-between">
-        <div className="w-[1rem] h-[12rem] bg-[#CADEE7] rounded-md mt-[1.5rem]"></div>
-        <div className="flex justify-center items-center rounded-lg">
-          <Image src="/Visacard.png" alt="" width={330} height={600}  className="cursor-pointer" onClick={() => router.push('/Visa')}/>
-        </div>
-        <div className="w-[1rem] h-[12rem] bg-[#CADEE7] rounded-md mt-[1.5rem]"></div>
-      </div>
-      <div className="flex justify-center ">
-        <BsDot className="text-[#CADEE7] text-3xl" />{" "}
-        <BsDot className="text-[#2C4860] text-3xl" />{" "}
-        <BsDot className="text-[#CADEE7] text-3xl" />
-      </div>
-      <div className="flex justify-center items-center ">
+    <>
+   <div className="bg-[#F5F6F8]   w-screen  h-screen">
+        <div className="w-full h-[20.5rem] bg-[#2C4860] ">
+          <div className="flex flex-row justify-between text-white text-3xl">
+            <AiOutlineAlignLeft className="ml-[1rem] mt-[1rem]" />
+            <div>
+              <BsCalendarEvent className="mr-[1rem] mt-[1rem]" />
+            </div>
+          </div>
+          <div className="flex justify-center items-center mt-[1rem] ">
+            <h5 className="text-lime-400">Available Balance</h5>
+          </div>
+          <div className="flex justify-center items-center flex-row">
+            <RiMoneyDollarCircleFill className="text-2xl text-white" />
+            <h1 className="text-3xl text-white"> $7,392.00 </h1>
+          </div>
+          <div className="flex justify-center items-center">
+            <h5 className="text-[#CADEE7]">june 9, 2018</h5>
+          </div>
+          <div className="flex justify-center items-center pt-[1rem]">
+          <div className=" bg-[#324E66] w-[80%] h-[6rem] border border-[#324E66] rounded-lg">
+            <div  className=" flex flex-row justify-around items-center text-xl text-white pt-[1rem] ">
+              <h1>42012</h1>
+              <h1>3049</h1>
+              <h1>2800</h1>
+              <h1>9815</h1>
+            </div>
+            <div className="flex justify-between">
+            <div className="flex  flex-row items-center text-white pl-[1rem] pt-[0.5rem]">
+            <h1>EXPIRE</h1>
+            <MdOutlineArrowRight/>
+            <h1>02/22</h1>
+            </div>
+            <div className="flex  flex-row items-center text-white pr-[1rem] pt-[0.5rem]">
+              <h1>CVC CODE</h1>
+              <MdOutlineArrowRight/>
+              <h1>230</h1>
+            </div>
+          </div>
+          </div>
+
+   </div>
+   <div className="flex justify-center items-center pt-[1rem] ">
         <div className="w-[90%] h-[6.2rem] bg-[#fff] rounded-xl ">
           <div className="flex flex-row justify-center items-center">
             <div className="w-[5rem] h-[2rem] border border-slate-400 rounded-xl   mt-[1rem]">
@@ -54,11 +72,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="flex flex-row justify-between text-[#2C4860] pl-[1rem] text-xl mt-[1rem]">
+      <div className="flex flex-row justify-between text-[#2C4860] pl-[1rem] text-xl mt-[1.5rem]">
         <h1>Detail of movements</h1>
-        <div className="text-2xl text-[#2C4860] pr-[1rem]">
-          <BsCalendarEvent />
+        <div className=" text-[#2C4860] pr-[1rem] flex flex-row items-center">
+          <h1 className="text-sm" >Weekly</h1>
+          <div className="text-3xl ">
+                      <RiArrowDropDownLine   />
+          </div>
+
         </div>
       </div>
       <div className="flex justify-center items-center pt-[1rem] flex-col">
@@ -83,12 +104,12 @@ export default function Home() {
             <div className="pl-[1rem] pt-[0.7rem] flex flex-row ">
               <Image src="/save-money.png" alt="" width={40} height={40} />
               <div className="flex flex-col pl-[1rem]">
-                <h1 className="font-bold text-md">Salary Deposit</h1>
-                <h5>june 1, 2018</h5>
+                <h1 className="font-bold text-md">Deposit Freelance</h1>
+                <h5>june 7, 2018</h5>
               </div>
               </div>
               <div className="flex justify-center pr-[1rem] pt-[1rem]  items-center">
-                <h1 className="text-xl text-[#27F487]">$1200 </h1>
+                <h1 className="text-xl text-[#27F487]">$800 </h1>
                 <HiArrowSmDown className="text-4xl text-[#27F487]" />
               </div>
           
@@ -100,7 +121,7 @@ export default function Home() {
               <Image src="/paper-bags.png" alt="" width={40} height={40} />
               <div className="flex flex-col pl-[1rem]">
                 <h1 className="font-bold text-md">Central Market</h1>
-                <h5>may 28, 2018</h5>
+                <h5>june 6, 2018</h5>
               </div>
               </div>
               <div className="flex justify-end pr-[1rem] items-center">
@@ -116,17 +137,35 @@ export default function Home() {
               <Image src="/money.png" alt="" width={40} height={40} />
               <div className="flex flex-col pl-[1rem]">
                 <h1 className="font-bold text-md">Salary Deposit</h1>
-                <h5>may 1, 2018</h5>
+                <h5>june 1, 2018</h5>
               </div>
               </div>
               <div className="flex justify-end pr-[1rem] items-center">
-                <h1 className="text-xl text-[#27F487]">$1200 </h1>
+                <h1 className="text-xl text-[#27F487]">$4200 </h1>
                 <HiArrowSmDown className="text-4xl text-[#27F487]" />
               </div>
       
           </div>
         </div>
+        <div className="w-[90%] h-[4.5rem] bg-[#fff] rounded-xl mt-[0.5rem]">
+          <div className="flex flex-row items-center justify-between">
+            <div className="pl-[1rem] pt-[0.7rem] flex flex-row ">
+              <Image src="/paper-bags.png" alt="" width={40} height={40} />
+              <div className="flex flex-col pl-[1rem]">
+                <h1 className="font-bold text-md">Central Market</h1>
+                <h5>june 1, 2018</h5>
+              </div>
+              </div>
+              <div className="flex justify-end pr-[1rem] items-center">
+                <h1 className="text-xl text-[#F42727]">$37 </h1>
+                <HiArrowSmUp className="text-4xl text-[#F42727]" />
+              </div>
+        
+          </div>
+        </div>
       </div>
-    </div>
+        </div>
+      </div>
+    </>
   );
 }
